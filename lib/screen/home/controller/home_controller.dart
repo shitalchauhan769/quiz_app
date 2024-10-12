@@ -13,7 +13,6 @@ class HomeController extends GetxController {
    RxList? optionList = [].obs;
    RxList<QuestionModel> allData = <QuestionModel>[].obs;
    RxnString no=RxnString();
-   RxInt resultNo = 0.obs;
    RxInt point = 0.obs;
 
 
@@ -42,11 +41,15 @@ class HomeController extends GetxController {
   void countData() {
     if(allData[index.value].correct_answer == no.value)
     {
+
       point++;
     }
 
-
   }
+   // void quizTime()
+   // {
+   //
+   // }
   // void optionChange(count) {
   //   optionList!.add(resultList![count].incorrect_answers![0]);
   //   optionList!.add(resultList![count].incorrect_answers![1]);

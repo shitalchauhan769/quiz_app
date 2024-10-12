@@ -10,7 +10,7 @@ class SharedHelper
   SharedHelper._();
   Future<QuizModel?> quizAPI()
   async {
-     String link="https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple";
+     String link="https://opentdb.com/api.php?amount=20&category=11&difficulty=easy&type=multiple";
      var response= await http.get(Uri.parse(link));
      // print("==============${response.statusCode}");
      if(response.statusCode==200)

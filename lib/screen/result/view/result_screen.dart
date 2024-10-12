@@ -59,6 +59,8 @@ class _ResultScreenState extends State<ResultScreen> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            const Image(image: AssetImage("assets/image/img.png"),height: 100,width: 100,fit: BoxFit.cover,),
+                            const SizedBox(height: 20,),
                             Center(
                               child: Container(
                                 height: 100,
@@ -77,22 +79,24 @@ class _ResultScreenState extends State<ResultScreen> {
                                 ),
                               ),
                             ),
-                            const Text(
-                              "Your Score ......!!!!!!!!!",
-                              style:
-                                  TextStyle(color: Colors.black, fontSize: 20),
+                            const Center(
+                              child: Padding(
+                                padding: EdgeInsets.all(10.0),
+                                child: Text(
+                                  "Congratulation, you've Completed quiz!",
+                                  style:
+                                      TextStyle(color: Colors.white, fontSize: 17),
+                                ),
+                              ),
                             ),
-                            const SizedBox(height: 50,),
-                            InkWell(
-                              onTap: () {
+                            const SizedBox(height: 20,),
+                            Container(child:TextButton(
+                              onPressed: () {
                                 controller.point.value=0;
                                 controller.index.value=0;
                                 controller.allData.value=[];
                                 Get.offAllNamed('/home');
-
-                              },
-                              child: Container(child: Icon(Icons.add),),
-                            )
+                            }, child: const Text("Explore more"),),)
                           ],
                         ),
                       ),
